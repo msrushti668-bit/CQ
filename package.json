@@ -1,51 +1,35 @@
 {
-  "name": "react",
-  "description": "React is a JavaScript library for building user interfaces.",
-  "keywords": [
-    "react"
-  ],
-  "version": "19.2.5",
-  "homepage": "https://react.dev/",
-  "bugs": "https://github.com/facebook/react/issues",
-  "license": "MIT",
-  "files": [
-    "LICENSE",
-    "README.md",
-    "index.js",
-    "cjs/",
-    "compiler-runtime.js",
-    "jsx-runtime.js",
-    "jsx-runtime.react-server.js",
-    "jsx-dev-runtime.js",
-    "jsx-dev-runtime.react-server.js",
-    "react.react-server.js"
-  ],
-  "main": "index.js",
-  "exports": {
-    ".": {
-      "react-server": "./react.react-server.js",
-      "default": "./index.js"
-    },
-    "./package.json": "./package.json",
-    "./jsx-runtime": {
-      "react-server": "./jsx-runtime.react-server.js",
-      "default": "./jsx-runtime.js"
-    },
-    "./jsx-dev-runtime": {
-      "react-server": "./jsx-dev-runtime.react-server.js",
-      "default": "./jsx-dev-runtime.js"
-    },
-    "./compiler-runtime": {
-      "react-server": "./compiler-runtime.js",
-      "default": "./compiler-runtime.js"
-    }
+  "name": "dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/facebook/react.git",
-    "directory": "packages/react"
+  "dependencies": {
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/supabase-js": "^2.104.1",
+    "clsx": "^2.1.1",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^1.11.0",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-leaflet": "^5.0.0",
+    "recharts": "^3.8.1",
+    "tailwind-merge": "^3.5.0"
   },
-  "engines": {
-    "node": ">=0.10.0"
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
