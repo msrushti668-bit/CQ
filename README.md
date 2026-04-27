@@ -1,37 +1,37 @@
-# `react`
+# Srushti Fleet Dashboard
 
-React is a JavaScript library for creating user interfaces.
+A comprehensive, Next.js-powered dashboard built for Customer Success and Operations teams to monitor fleet health, support tickets, and regional distribution.
 
-The `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.
+## Features
+*   **Real-time Analytics:** Track MRR, active drivers, and fleet sizes.
+*   **Interactive Map:** View customer locations across the US.
+*   **Deep Filtering & Sorting:** Search by name, filter by status/channel, and sort by MRR.
+*   **Responsive Design:** Fully optimized for desktop and tablet viewports.
 
-**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.
+## Tech Stack
+*   **Framework:** Next.js (App Router)
+*   **Styling:** Tailwind CSS + Lucide React (Icons)
+*   **Database:** Supabase (PostgreSQL)
+*   **Mapping:** React-Leaflet
 
-## Usage
+## Setup Instructions
 
-```js
-import { useState } from 'react';
-import { createRoot } from 'react-dom/client';
-
-function Counter() {
-  const [count, setCount] = useState(0);
-  return (
-    <>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
-    </>
-  );
-}
-
-const root = createRoot(document.getElementById('root'));
-root.render(<Counter />);
+### 1. Clone the repository
+```bash
+git clone <repository-url>
+cd dashboard
+npm install
 ```
 
-## Documentation
+### 2. Environment Variables
+Create a `.env.local` file in the root directory and add your Supabase credentials:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-See https://react.dev/
-
-## API
-
-See https://react.dev/reference/react
+### 3. Run Locally
+```bash
+npm run dev
+```
+Open http://localhost:3000 in your browser.
